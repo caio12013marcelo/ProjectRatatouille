@@ -12,7 +12,8 @@ programa
 			leia(cod)
 			escreva("Informe a senha :")
 			leia(password)
-
+			numUsuario=0
+			opc=0
 			para(inteiro i=0;i<4;i++){
 				se(cod==login[i] e senha[i]==password){
 					numUsuario = i
@@ -119,7 +120,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2541; 
+ * @POSICAO-CURSOR = 529; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {saque, 6, 10, 5}-{restante, 6, 18, 8}-{opc, 6, 29, 3}-{deposito, 6, 35, 8}-{valor100, 6, 46, 8}-{valor50, 6, 57, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
