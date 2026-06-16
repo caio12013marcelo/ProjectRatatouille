@@ -34,8 +34,11 @@ programa
 				caso 2:
 					escreva("informe o valor do saque : ")
 					leia(saque)
+					se(saque%10 == 1 ou saque%10 == 3 ou saque%10 == 7){
+						escreva("invalido")
+					}senao{
 					se(saque>saldo[numUsuario]){
-						escreva("Ínvalido")
+						escreva("invalido, não pode colocar um saque terminando em 1 ou 3 ou 7\n")
 					}senao{
 						saldo[numUsuario]= saldo[numUsuario]-saque
 						restante=saque
@@ -93,16 +96,18 @@ programa
 									escreva("5 Ratatouilles: ",valor5,"\n")
 								}
 							}
+						  }	
 						}
-						
-						
 					}
-					
 					pare
 				caso 3:
 					escreva("Informe o quanto quer depositar : \n")
 					leia(deposito)
-					saldo[numUsuario]= saldo[numUsuario]+deposito
+					se(deposito%10 == 1 ou deposito%10 == 3 ou deposito%10 == 7){
+							escreva("invalido, não pode colocar valor terminando em 1 ou 3 ou 7\n")
+					}senao{
+						saldo[numUsuario]= saldo[numUsuario]+deposito
+					}
 					pare
 				caso 4:
 					escreva("Até a proxima\n")
@@ -120,9 +125,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 529; 
+ * @POSICAO-CURSOR = 1376; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {saque, 6, 10, 5}-{restante, 6, 18, 8}-{opc, 6, 29, 3}-{deposito, 6, 35, 8}-{valor100, 6, 46, 8}-{valor50, 6, 57, 7};
+ * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
