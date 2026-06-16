@@ -42,7 +42,7 @@ programa
 					}senao{
 						saldo[numUsuario]= saldo[numUsuario]-saque
 						restante=saque
-						escreva("Usuario: ",usuario[numUsuario],"\n NOTAS ENTREGUES\n")
+						escreva("## Usuario ## \n   ",usuario[numUsuario],"\n NOTAS ENTREGUES\n")
 						se(restante>=100){
 							para(inteiro i=0;i<40;i++){
 								se(restante>=100){
@@ -125,7 +125,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1376; 
+ * @POSICAO-CURSOR = 1495; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
