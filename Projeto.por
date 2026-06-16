@@ -75,7 +75,7 @@ programa
 								}
 							}
 						}
-						se(restante>=2){
+						se(restante % 2 ==0){
 							para(inteiro i=0;i<15;i++){
 								se(restante>=2){
 									valor2=restante/2
@@ -84,7 +84,7 @@ programa
 								}
 							}
 						}
-						se(restante>=5){
+						se(restante % 5 ==0){
 							para(inteiro i=0;i<15;i++){
 								se(restante>=5){
 									valor5=restante/5
@@ -119,7 +119,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1543; 
+ * @POSICAO-CURSOR = 2541; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {saque, 6, 10, 5}-{restante, 6, 18, 8}-{opc, 6, 29, 3}-{deposito, 6, 35, 8}-{valor100, 6, 46, 8}-{valor50, 6, 57, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
