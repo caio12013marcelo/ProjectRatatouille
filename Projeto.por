@@ -81,7 +81,7 @@ programa
 							restante= restante-valor10*10
 							escreva("10 Ratatouilles: ",valor10,"\n")
 							}
-						se(restante % 5 == 0){
+						se(restante % 5 == 0 e restante>=5){
 								se(restante>=5 e restante<=75){
 									valor5=restante/5
 								}senao{
@@ -90,7 +90,7 @@ programa
 							restante= restante-valor5*5
 							escreva("5 Ratatouilles: ",valor5,"\n")
 							}
-						se(restante % 2 == 0){
+						se(restante % 2 == 0 e restante>=2){
 							se(restante>=2 e restante <=30){
 								valor2=restante/2
 							}senao{
@@ -127,7 +127,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3475; 
+ * @POSICAO-CURSOR = 2837; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
