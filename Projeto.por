@@ -4,7 +4,7 @@ programa
 	funcao inicio()
 	{
 		inteiro saque=0,restante=0,opc=0,deposito=0,valor100=0,valor50=0,valor20=0,valor10=0,valor5=0,valor2=0,numUsuario=0,cod
-		inteiro saldo[5]={6805,200,300,400,500},login[5]={101,102,103,104,105}
+		inteiro saldo[5]={7005,200,300,400,500},login[5]={101,102,103,104,105}
 		cadeia senha[5]= {"101","102","103","104","105"},usuario[5]={"Rodney","Claudney","Edney","vanderley","Sidney"},password
 		logico invalid=verdadeiro
 		enquanto(invalid){
@@ -15,6 +15,7 @@ programa
 				leia(password)
 				numUsuario=0
 				opc=0
+				limpa()
 				para(inteiro i=0;i<4;i++){
 					se(cod==login[i] e senha[i]==password){
 						numUsuario = i
@@ -45,7 +46,7 @@ programa
 						saldo[numUsuario]= saldo[numUsuario]-saque
 						restante=saque
 						se(saque>=6805){
-							escreva("limite de caixa é 6805\n")
+							escreva("limite de caixa é 7005\n")
 						}
 						escreva("## Usuario ## \n   ",usuario[numUsuario],"\n NOTAS ENTREGUES\n")
 						se(restante>=100){
@@ -115,6 +116,7 @@ programa
 					}
 					pare
 				caso 4:
+					limpa()
 					escreva("Até a proxima\n")
 					pare
 				caso contrario:
@@ -130,7 +132,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1581; 
+ * @POSICAO-CURSOR = 3486; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
