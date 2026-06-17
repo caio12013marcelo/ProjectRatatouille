@@ -49,55 +49,55 @@ programa
 								}senao{
 									valor100=40
 								}
-								restante=restante-valor100*100
-							}
+							restante=restante-valor100*100
 							escreva("100 Ratatouilles: ",valor100,"\n")
+							}
 						se(restante>=50){
 								se(restante>=50 e restante<=2000){
 									valor50=restante/50
 								}senao{
 									valor50=40
 								}
-								restante= restante-valor50*50
+							restante= restante-valor50*50
+							escreva("50 Ratatouilles: ",valor50,"\n")
 							}
-						escreva("50 Ratatouilles: ",valor50,"\n")
-						se(restante>=20 e restante<=600){
+						se(restante>=20){
 								se(restante>=20 e restante<=600){
 									valor20=restante/20
 								}senao{
 									valor20=30
 								}
-								restante= restante-valor20*20
+							restante= restante-valor20*20
+							escreva("20 Ratatouilles: ",valor20,"\n")
 							}
-						escreva("20 Ratatouilles: ",valor20,"\n")
-						se(restante>=10 e restante<=100){
-								se(restante>=10 e restante<=100){
-									valor10=restante/20
+						se(restante>=10){
+								se(restante>=10 e restante<=300){
+									valor10=restante/10
 								}senao{
 									valor10=30
 								}
-								restante= restante-valor10*10
-							}
+							restante= restante-valor10*10
 							escreva("10 Ratatouilles: ",valor10,"\n")
-						se(restante % 5 ==0 e restante<=75){
-								se(restante>=5){
+							}
+						se(restante % 5 == 0){
+								se(restante>=5 e restante<=75){
 									valor5=restante/5
 								}senao{
 									valor5=15
 								}
-								restante= restante-valor5*5
-							}
+							restante= restante-valor5*5
 							escreva("5 Ratatouilles: ",valor5,"\n")
-						se(restante % 2 ==0 e restante <=30){
-							se(restante>=2){
+							}
+						se(restante % 2 == 0){
+							se(restante>=2 e restante <=30){
 								valor2=restante/2
 							}senao{
 								valor2=15
 							}
-							restante= restante-valor2*2
-						}
+						restante= restante-valor2*2
 						escreva("2 Ratatouilles: ",valor2,"\n")
 						}
+					   }
 					}
 					pare
 				caso 3:
@@ -125,7 +125,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2073; 
+ * @POSICAO-CURSOR = 2765; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
