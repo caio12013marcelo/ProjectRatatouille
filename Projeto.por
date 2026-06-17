@@ -4,7 +4,7 @@ programa
 	funcao inicio()
 	{
 		inteiro saque=0,restante=0,opc=0,deposito=0,valor100=0,valor50=0,valor20=0,valor10=0,valor5=0,valor2=0,numUsuario=0,cod
-		inteiro saldo[5]={5000,200,300,400,500},login[5]={101,102,103,104,105}
+		inteiro saldo[5]={6805,200,300,400,500},login[5]={101,102,103,104,105}
 		cadeia senha[5]= {"101","102","103","104","105"},usuario[5]={"Rodney","Claudney","Edney","vanderley","Sidney"},password
 		logico invalid=verdadeiro
 		enquanto(invalid){
@@ -21,7 +21,7 @@ programa
 				}
 			}
 			se(invalid==verdadeiro){
-				escreva("informe novamente los codigos and the password\n")
+				escreva("## SENHA OU USUARIOS ERRADOS ##")
 			}
 			enquanto(opc!=4){
 			invalid=verdadeiro
@@ -29,7 +29,7 @@ programa
 			leia(opc)
 			escolha(opc){
 				caso 1:
-					escreva("o seu saldo é ",saldo[numUsuario]," ratatouille\n")
+					escreva("o seu saldo(",usuario[numUsuario],"), é ",saldo[numUsuario]," ratatouille\n")
 					pare
 				caso 2:
 					escreva("informe o valor do saque : ")
@@ -44,62 +44,59 @@ programa
 						restante=saque
 						escreva("## Usuario ## \n   ",usuario[numUsuario],"\n NOTAS ENTREGUES\n")
 						se(restante>=100){
-							para(inteiro i=0;i<40;i++){
 								se(restante>=100 e restante<=4000){
 									valor100= restante/100
-									restante= restante-valor100*100
 								}senao{
-									valor100= 40
-									restante= restante-valor100*100
+									valor100=40
 								}
+								restante=restante-valor100*100
 							}
 							escreva("100 Ratatouilles: ",valor100,"\n")
-						}
 						se(restante>=50){
-							para(inteiro i=0;i<40;i++){
-								se(restante>=50){
+								se(restante>=50 e restante<=2000){
 									valor50=restante/50
-									restante= restante-valor50*50
-									escreva("50 Ratatouilles: ",valor50,"\n")
+								}senao{
+									valor50=40
 								}
+								restante= restante-valor50*50
 							}
-						}
-						se(restante>=20){
-							para(inteiro i=0;i<30;i++){
-								se(restante>=20){
+						escreva("50 Ratatouilles: ",valor50,"\n")
+						se(restante>=20 e restante<=600){
+								se(restante>=20 e restante<=600){
 									valor20=restante/20
-									restante= restante-valor20*20
-									escreva("20 Ratatouilles: ",valor20,"\n")
+								}senao{
+									valor20=30
 								}
+								restante= restante-valor20*20
 							}
-						}
-						se(restante>=10){
-							para(inteiro i=0;i<30;i++){
-								se(restante>=10){
+						escreva("20 Ratatouilles: ",valor20,"\n")
+						se(restante>=10 e restante<=100){
+								se(restante>=10 e restante<=100){
 									valor10=restante/20
-									restante= restante-valor10*10
-									escreva("10 Ratatouilles: ",valor10,"\n")
+								}senao{
+									valor10=30
 								}
+								restante= restante-valor10*10
 							}
-						}
-						se(restante % 2 ==0){
-							para(inteiro i=0;i<15;i++){
-								se(restante>=2){
-									valor2=restante/2
-									restante= restante-valor2*2
-									escreva("2 Ratatouilles: ",valor2,"\n")
-								}
-							}
-						}
-						se(restante % 5 ==0){
-							para(inteiro i=0;i<15;i++){
+							escreva("10 Ratatouilles: ",valor10,"\n")
+						se(restante % 5 ==0 e restante<=75){
 								se(restante>=5){
 									valor5=restante/5
-									restante= restante-valor5*5
-									escreva("5 Ratatouilles: ",valor5,"\n")
+								}senao{
+									valor5=15
 								}
+								restante= restante-valor5*5
 							}
-						  }	
+							escreva("5 Ratatouilles: ",valor5,"\n")
+						se(restante % 2 ==0 e restante <=30){
+							se(restante>=2){
+								valor2=restante/2
+							}senao{
+								valor2=15
+							}
+							restante= restante-valor2*2
+						}
+						escreva("2 Ratatouilles: ",valor2,"\n")
 						}
 					}
 					pare
@@ -128,7 +125,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3503; 
+ * @POSICAO-CURSOR = 2073; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
