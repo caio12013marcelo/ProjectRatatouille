@@ -46,7 +46,7 @@ programa
 					}senao{
 						saldo[numUsuario]= saldo[numUsuario]-saque
 						restante=saque
-						se(saque>=6805){
+						se(saque>=7005){
 							escreva("limite de caixa é 7005\n")
 						}
 						escreva("## Usuario ## \n   ",usuario[numUsuario],"\n NOTAS ENTREGUES\n")
@@ -133,7 +133,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 936; 
+ * @POSICAO-CURSOR = 1595; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
