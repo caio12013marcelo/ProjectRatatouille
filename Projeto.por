@@ -8,20 +8,22 @@ programa
 		cadeia senha[5]= {"101","102","103","104","105"},usuario[5]={"Rodney","Claudney","Edney","vanderley","Sidney"},password
 		logico invalid=verdadeiro
 		enquanto(invalid){
-			escreva("Informe o codigo de usuario :")
-			leia(cod)
-			escreva("Informe a senha :")
-			leia(password)
-			numUsuario=0
-			opc=0
-			para(inteiro i=0;i<4;i++){
-				se(cod==login[i] e senha[i]==password){
-					numUsuario = i
-					invalid=falso
+			enquanto(invalid){
+				escreva("Informe o codigo de usuario :")
+				leia(cod)
+				escreva("Informe a senha :")
+				leia(password)
+				numUsuario=0
+				opc=0
+				para(inteiro i=0;i<4;i++){
+					se(cod==login[i] e senha[i]==password){
+						numUsuario = i
+						invalid=falso
+					}
 				}
-			}
-			se(invalid==verdadeiro){
-				escreva("## SENHA OU USUARIOS ERRADOS ##")
+				se(invalid==verdadeiro){
+					escreva("## SENHA OU USUARIOS ERRADOS ##\n")
+				}
 			}
 			enquanto(opc!=4){
 			invalid=verdadeiro
@@ -125,7 +127,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2765; 
+ * @POSICAO-CURSOR = 3475; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
