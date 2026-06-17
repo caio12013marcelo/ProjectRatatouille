@@ -27,9 +27,10 @@ programa
 				}
 			}
 			enquanto(opc!=4){
-			invalid=verdadeiro
-			escreva("======= Caixa Eletrônico =======\n1 - Consultar Saldo\n2 - Realizar Saque\n3 - Realizar Depósito\n4 - Sair\n===============================\nEscolha a opção desejada: ")
-			leia(opc)
+				escreva(" ## SEJA-BEM VINDO,",usuario[numUsuario]," ##\n")
+				invalid=verdadeiro
+				escreva("======= Caixa Eletrônico =======\n1 - Consultar Saldo\n2 - Realizar Saque\n3 - Realizar Depósito\n4 - Sair\n===============================\nEscolha a opção desejada: ")
+				leia(opc)
 			escolha(opc){
 				caso 1:
 					escreva("o seu saldo(",usuario[numUsuario],"), é ",saldo[numUsuario]," ratatouille\n")
@@ -132,7 +133,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3486; 
+ * @POSICAO-CURSOR = 826; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
