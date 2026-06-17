@@ -4,7 +4,7 @@ programa
 	funcao inicio()
 	{
 		inteiro saque=0,restante=0,opc=0,deposito=0,valor100=0,valor50=0,valor20=0,valor10=0,valor5=0,valor2=0,numUsuario=0,cod
-		inteiro saldo[5]={100,200,300,400,500},login[5]={101,102,103,104,105}
+		inteiro saldo[5]={5000,200,300,400,500},login[5]={101,102,103,104,105}
 		cadeia senha[5]= {"101","102","103","104","105"},usuario[5]={"Rodney","Claudney","Edney","vanderley","Sidney"},password
 		logico invalid=verdadeiro
 		enquanto(invalid){
@@ -45,12 +45,15 @@ programa
 						escreva("## Usuario ## \n   ",usuario[numUsuario],"\n NOTAS ENTREGUES\n")
 						se(restante>=100){
 							para(inteiro i=0;i<40;i++){
-								se(restante>=100){
-									valor100=restante/100
+								se(restante>=100 e restante<=4000){
+									valor100= restante/100
 									restante= restante-valor100*100
-									escreva("100 Ratatouilles: ",valor100,"\n")
+								}senao{
+									valor100= 40
+									restante= restante-valor100*100
 								}
 							}
+							escreva("100 Ratatouilles: ",valor100,"\n")
 						}
 						se(restante>=50){
 							para(inteiro i=0;i<40;i++){
@@ -125,7 +128,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1495; 
+ * @POSICAO-CURSOR = 3503; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
