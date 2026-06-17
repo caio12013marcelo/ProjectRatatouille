@@ -29,7 +29,7 @@ programa
 			enquanto(opc!=4){
 				escreva(" ## SEJA-BEM VINDO, ",usuario[numUsuario]," ##\n")
 				invalid=verdadeiro
-				escreva("======= Caixa Eletrônico =======\n1 - CONSULTAR SALDO\n2 - SAQUE\n3 - DEPÓSITO\n4 - SAIR\n===============================\nEscolha a opção desejada: ")
+				escreva("======= CAIXA ELETRÔNICO =======\n1 - CONSULTAR SALDO\n2 - SAQUE\n3 - DEPÓSITO\n4 - SAIR\n===============================\nEscolha a opção desejada: ")
 				leia(opc)
 			escolha(opc){
 				caso 1:
@@ -133,7 +133,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 965; 
+ * @POSICAO-CURSOR = 936; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
