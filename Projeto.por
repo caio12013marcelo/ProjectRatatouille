@@ -31,15 +31,16 @@ programa
 				invalid=verdadeiro
 				escreva("======= CAIXA ELETRÔNICO =======\n1 - CONSULTAR SALDO\n2 - SAQUE\n3 - DEPÓSITO\n4 - SAIR\n===============================\nEscolha a opção desejada: ")
 				leia(opc)
+				limpa()
 			escolha(opc){
 				caso 1:
-					escreva("o seu saldo(",usuario[numUsuario],"), é ",saldo[numUsuario]," ratatouille\n")
+					escreva("o seu saldo ( ",usuario[numUsuario]," ) , é ",saldo[numUsuario]," ratatouille\n")
 					pare
 				caso 2:
 					escreva("informe o valor do saque : ")
 					leia(saque)
 					se(saque%10 == 1 ou saque%10 == 3 ou saque%10 == 7){
-						escreva("invalido")
+						escreva("invalido, não pode sacar terminando em 1 ou 3 ou 7\n")
 					}senao{
 					se(saque>saldo[numUsuario]){
 						escreva("invalido, não pode colocar um saque terminando em 1 ou 3 ou 7\n")
@@ -110,11 +111,7 @@ programa
 				caso 3:
 					escreva("Informe o quanto quer depositar : \n")
 					leia(deposito)
-					se(deposito%10 == 1 ou deposito%10 == 3 ou deposito%10 == 7){
-							escreva("invalido, não pode colocar valor terminando em 1 ou 3 ou 7\n")
-					}senao{
-						saldo[numUsuario]= saldo[numUsuario]+deposito
-					}
+					saldo[numUsuario]= saldo[numUsuario]+deposito
 					pare
 				caso 4:
 					limpa()
@@ -133,7 +130,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1595; 
+ * @POSICAO-CURSOR = 1659; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
