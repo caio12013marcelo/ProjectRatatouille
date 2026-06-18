@@ -44,6 +44,7 @@ public class Main {
                         }else if(saque % 10 ==1 || saque % 10 ==7 || saque % 10 == 3) {
                             System.out.println(" ## INFORME OUTRO VALOR, NÃO ACEITAMOS VALOR QUE TERMINAM COM 1,3 OU 7 ## ");
                         }else{
+                            System.out.println(" ## NOTAS ENTREGUES ## ");
                             int rest;
                             if (saque>=7005){
                                 saque=7005;
@@ -51,6 +52,61 @@ public class Main {
                             }
                             rest= saque;
                             saldo[id]=saldo[id]-saque;
+                                if(rest>=100){
+                                 if (rest>=100 && rest<7005){
+                                    valor100= rest/100;
+                                }else{
+                                    valor100=40;
+                                 }
+                                rest= rest-valor100*100;
+                                System.out.println("*100 ratatouilles : "+valor100);
+                                }
+                                if (rest>=50){
+                                    if (rest>=50 && rest<2000) {
+                                        valor50 = rest / 50;
+                                    }else{
+                                        valor50=40;
+                                    }
+                                    rest = rest-valor50*50;
+                                    System.out.println("*50 ratatouilles : "+valor50);
+                                }
+                                if (rest>=20){
+                                    if (rest>=20 && rest<600){
+                                        valor20= rest/20;
+                                    }else {
+                                        valor20=30;
+                                    }
+                                    rest= rest-valor20*20;
+                                    System.out.println("*20 ratatouilles : "+valor20);
+                                }
+                                if (rest>=10){
+                                    if (rest>=10 && rest<300){
+                                        valor10= rest/10;
+                                    }else{
+                                        valor10=30;
+                                    }
+                                    rest= rest-valor10*10;
+                                    System.out.println("*10 ratatouilles : "+valor10);
+                                }
+                                if (rest>=5){
+                                    if (rest % 5 ==0 && rest<75){
+                                        valor5 = rest/5;
+                                    }else{
+                                        valor5 = 15;
+                                    }
+                                    rest= rest-valor5*5;
+                                    System.out.println("*5 ratatouilles : "+valor5);
+                                }
+                                if (rest>=2){
+                                    if (rest % 2 ==0 && rest<30){
+                                        valor2= rest/2;
+                                    }else{
+                                        valor2=15;
+                                    }
+                                    rest= rest-valor2*2;
+                                    System.out.println("*2 ratatouilles : "+valor2);
+                                }
+                            System.out.println(" ## O SEU SALDO RESTANTE "+userName[id].toUpperCase()+" É DE : "+saldo[id]+" ## ");
                             }
                         break;
                     case 3:
