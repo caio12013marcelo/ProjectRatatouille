@@ -11,9 +11,9 @@ public class Main {
         while(invalid){//Serve para que o programa sempre repita
             while (invalid){//Serve que quanto o usuario não digitar a senha e usuario certo, ele ficará sempre repetindo
                 System.out.println("Informe o seu usuario: ");//pergunta o codigo de usuario
-                int user = input.nextInt();
+                int user = input.nextInt();//Lê a respota do usuario e cria variável para guarda a resposta
                 System.out.println("Informe a sua senha: ");//pergunta o senha do usuario
-                String request = input.next();
+                String request = input.next();//Lê a respota do usuario e cria variável para guarda a resposta
                 opc=0;//difine a variavel para zero por causa do caixa
                 id=0;//difine a variavel para zero para evitar possível problemas
                 for (int i=0 ; i<4; i++){//repete passando pelo todos índices dos vetores
@@ -30,8 +30,7 @@ public class Main {
                 invalid=true;//a variável volta a ser verdadeira caso o usuario saía do caixa, assim tendo que perguntar denovo o usuario e senha denovo, também para deixar o programa sempre ativo
                 System.out.println(" ## SEJA-BEM VINDO "+ userName[id].toUpperCase()+ " ## ");//Imprime uma saudação de boas vindas e coloca o nome do usuario e o ".toUpperCase()" serve para deixar o nome de usuario em maíusculo
                 System.out.println("======= CAIXA ELETRÔNICO =======\n1 - CONSULTAR SALDO\n2 - SAQUE\n3 - DEPÓSITO\n4 - SAIR\n===============================\nEscolha a opção desejada: ");//imprime a tela do caixa e pergunta a opção do usuario
-                opc = input.nextInt();
-
+                opc = input.nextInt();//Lê a respota do usuario
                 switch (opc){
                     case 1:
                         System.out.println(" ## Saldo ( "+userName[id]+" ) , disponível de "+saldo[id]+" ratatouille ## ");
@@ -111,7 +110,7 @@ public class Main {
                         break;
                     case 3:
                         System.out.println(" ## INFORME O QUANTO QUER DEPOSITAR ## ");
-                        int deposito = input.nextInt();
+                        int deposito = input.nextInt();//Lê a respota do usuario e cria variável para guarda a resposta
                         saldo[id]= saldo[id]+deposito;
                         break;
                     case 4:
