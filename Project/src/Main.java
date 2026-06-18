@@ -23,13 +23,13 @@ public class Main {
                     }
                 }
                 if (invalid==true){//Se a varíavel ainda continuar verdadeira signifa que senha e usuario possívelmente estão incorretos
-                    System.out.println(" ## SENHA OU USUARIO ESTÃO INCORRETOS ##");
+                    System.out.println(" ## SENHA OU USUARIO ESTÃO INCORRETOS ##");//imprime quando os senha ou usuario estão incorretos
                 }
             }
-            while(opc!=4){
-                invalid=true;
-                System.out.println(" ## SEJA-BEM VINDO "+ userName[id].toUpperCase()+ " ## ");
-                System.out.println("======= CAIXA ELETRÔNICO =======\n1 - CONSULTAR SALDO\n2 - SAQUE\n3 - DEPÓSITO\n4 - SAIR\n===============================\nEscolha a opção desejada: ");
+            while(opc!=4){//enquanto a Opção = opc não for 4 = sair, o programa continuará a se repitar
+                invalid=true;//a variável volta a ser verdadeira caso o usuario saía do caixa, assim tendo que perguntar denovo o usuario e senha denovo
+                System.out.println(" ## SEJA-BEM VINDO "+ userName[id].toUpperCase()+ " ## ");//Imprime uma saudação de boas vindas e coloca o nome do usuario e o ".toUpperCase()" serve para deixar o nome de usuario em maíusculo
+                System.out.println("======= CAIXA ELETRÔNICO =======\n1 - CONSULTAR SALDO\n2 - SAQUE\n3 - DEPÓSITO\n4 - SAIR\n===============================\nEscolha a opção desejada: ");//imprime a tela do caixa e pergunta a opção do usuario
                 opc = input.nextInt();
 
                 switch (opc){
