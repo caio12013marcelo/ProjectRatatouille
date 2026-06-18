@@ -34,21 +34,21 @@ programa
 				limpa()
 			escolha(opc){
 				caso 1:
-					escreva("o seu saldo ( ",usuario[numUsuario]," ) , é ",saldo[numUsuario]," ratatouille\n")
+					escreva(" ## Saldo ( ",usuario[numUsuario]," ) , disponível de ",saldo[numUsuario]," ratatouille ##\n")
 					pare
 				caso 2:
-					escreva("informe o valor do saque : ")
+					escreva("Informe o valor do saque : ")
 					leia(saque)
 					se(saque%10 == 1 ou saque%10 == 3 ou saque%10 == 7){
-						escreva("invalido, não pode sacar terminando em 1 ou 3 ou 7\n")
+						escreva("Invalido, não pode sacar terminando em 1 ou 3 ou 7\n")
 					}senao{
 					se(saque>saldo[numUsuario]){
-						escreva("invalido, não pode colocar um saque terminando em 1 ou 3 ou 7\n")
+						escreva("Você não possue dinheiro para sacar esse valor\n")
 					}senao{
 						saldo[numUsuario]= saldo[numUsuario]-saque
 						restante=saque
 						se(saque>=7005){
-							escreva("limite de caixa é 7005\n")
+							escreva("Limite de caixa é 7005\n")
 						}
 						escreva("## Usuario : ",usuario[numUsuario]," ##\n NOTAS ENTREGUES\n")
 						se(restante>=100){
@@ -106,12 +106,14 @@ programa
 						escreva("2 Ratatouilles: ",valor2,"\n")
 						}
 					   }
+					   escreva("## saldo restante : ",saldo[numUsuario]," ## \n")
 					}
 					pare
 				caso 3:
 					escreva("Informe o quanto quer depositar : \n")
 					leia(deposito)
 					saldo[numUsuario]= saldo[numUsuario]+deposito
+					escreva("## Saldo disponível : ",saldo[numUsuario]," ## \n")
 					pare
 				caso 4:
 					limpa()
@@ -130,7 +132,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1739; 
+ * @POSICAO-CURSOR = 1210; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
