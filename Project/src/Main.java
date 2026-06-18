@@ -115,7 +115,7 @@ public class Main {
                         saldo[id]= saldo[id]+deposito;
                         break;
                     case 4:
-                        System.out.println(" ## AT&Eacute; A PR&Oacute;XIMA ##");
+                        System.out.println(" ## ATÉ A PRÓXIMA ##");
                         break;
                     default:
                         System.out.println(" ## ERRO ##");
