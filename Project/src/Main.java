@@ -48,7 +48,7 @@ public class Main {
                             int rest;
                             if (saque>=7005){
                                 saque=7005;
-                                System.out.println(" ## O LIMITE DE CAIXA &Eacute; 7005 ## ");
+                                System.out.println(" ## O LIMITE DE CAIXA É DE 7005 ## ");
                             }
                             rest= saque;
                             saldo[id]=saldo[id]-saque;
