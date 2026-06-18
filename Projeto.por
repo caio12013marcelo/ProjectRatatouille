@@ -45,11 +45,13 @@ programa
 					se(saque>saldo[numUsuario]){
 						escreva("Você não possue dinheiro para sacar esse valor\n")
 					}senao{
-						saldo[numUsuario]= saldo[numUsuario]-saque
-						restante=saque
 						se(saque>=7005){
+							saldo[numUsuario]= saldo[numUsuario]-7005
 							escreva("Limite de caixa é 7005\n")
+						}senao{
+							saldo[numUsuario]= saldo[numUsuario]-saque
 						}
+						restante=saque
 						escreva("## Usuario : ",usuario[numUsuario]," ##\n NOTAS ENTREGUES\n")
 						se(restante>=100){
 								se(restante>=100 e restante<=4000){
@@ -132,7 +134,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1210; 
+ * @POSICAO-CURSOR = 1636; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
