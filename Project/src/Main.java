@@ -27,7 +27,7 @@ public class Main {
                 }
             }
             while(opc!=4){//enquanto a Opção = opc não for 4 = sair, o programa continuará a se repitar
-                invalid=true;//a variável volta a ser verdadeira caso o usuario saía do caixa, assim tendo que perguntar denovo o usuario e senha denovo
+                invalid=true;//a variável volta a ser verdadeira caso o usuario saía do caixa, assim tendo que perguntar denovo o usuario e senha denovo, também para deixar o programa sempre ativo
                 System.out.println(" ## SEJA-BEM VINDO "+ userName[id].toUpperCase()+ " ## ");//Imprime uma saudação de boas vindas e coloca o nome do usuario e o ".toUpperCase()" serve para deixar o nome de usuario em maíusculo
                 System.out.println("======= CAIXA ELETRÔNICO =======\n1 - CONSULTAR SALDO\n2 - SAQUE\n3 - DEPÓSITO\n4 - SAIR\n===============================\nEscolha a opção desejada: ");//imprime a tela do caixa e pergunta a opção do usuario
                 opc = input.nextInt();
