@@ -41,16 +41,17 @@ public class Main {
                         int saque = input.nextInt();
                         if (saque>saldo[id]){
                             System.out.println(" ## O SAQUE É DE VALOR MAIS QUE O SALDO ## ");
+                        }else if(saque % 10 ==1 || saque % 10 ==7 || saque % 10 == 3) {
+                            System.out.println(" ## INFORME OUTRO VALOR, NÃO ACEITAMOS VALOR QUE TERMINAM COM 1,3 OU 7 ## ");
                         }else{
                             int rest;
                             if (saque>=7005){
                                 saque=7005;
-                                System.out.println(" ## O LIMITE DE CAIXA É 7005 ## ");
+                                System.out.println(" ## O LIMITE DE CAIXA &Eacute; 7005 ## ");
                             }
                             rest= saque;
                             saldo[id]=saldo[id]-saque;
-
-                        }
+                            }
                         break;
                     case 3:
                         System.out.println(" ## INFORME O QUANTO QUER DEPOSITAR ## ");
@@ -58,7 +59,7 @@ public class Main {
                         saldo[id]= saldo[id]+deposito;
                         break;
                     case 4:
-                        System.out.println(" ## ATÉ A PRÓXIMA ##");
+                        System.out.println(" ## AT&Eacute; A PR&Oacute;XIMA ##");
                         break;
                     default:
                         System.out.println(" ## ERRO ##");
