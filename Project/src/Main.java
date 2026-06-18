@@ -28,7 +28,7 @@ public class Main {
             }
             while(opc!=4){
                 invalid=true;
-                System.out.println(" ## SEJA-BEM VINDO "+ userName[id]+ " ## ");
+                System.out.println(" ## SEJA-BEM VINDO "+ userName[id].toUpperCase()+ " ## ");
                 System.out.println("======= CAIXA ELETRÔNICO =======\n1 - CONSULTAR SALDO\n2 - SAQUE\n3 - DEPÓSITO\n4 - SAIR\n===============================\nEscolha a opção desejada: ");
                 opc = input.nextInt();
 
@@ -37,7 +37,20 @@ public class Main {
                         System.out.println(" ## Saldo ( "+userName[id]+" ) , disponível de "+saldo[id]+" ratatouille ## ");
                         break;
                     case 2:
-                        //take a breath
+                        System.out.println(" ## INFORME O QUANTO QUER SACAR ## ");
+                        int saque = input.nextInt();
+                        if (saque>saldo[id]){
+                            System.out.println(" ## O SAQUE É DE VALOR MAIS QUE O SALDO ## ");
+                        }else{
+                            int rest;
+                            if (saque>=7005){
+                                saque=7005;
+                                System.out.println(" ## O LIMITE DE CAIXA É 7005 ## ");
+                            }
+                            rest= saque;
+                            saldo[id]=saldo[id]-saque;
+
+                        }
                         break;
                     case 3:
                         System.out.println(" ## INFORME O QUANTO QUER DEPOSITAR ## ");
