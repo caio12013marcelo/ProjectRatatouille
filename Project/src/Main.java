@@ -7,22 +7,22 @@ public class Main {
         int valor100=0,valor50=0,valor20=0,valor10=0,valor5=0,valor2=0,opc=0,id=0;
         int[] login={101,102,103,104,105},saldo={7005,205,600,300,450};
         String[] senha={"101","102","103","104","105"},userName={"Bruce","Clark","Peter","Eddie","Mary"};
-        boolean invalid=true;
-        while(invalid){
-            while (invalid){
-                System.out.println("Informe o seu usuario: ");
+        boolean invalid=true;//É uma varíavel que define se o While estará ativo
+        while(invalid){//Serve para que o programa sempre repita
+            while (invalid){//Serve que quanto o usuario não digitar a senha e usuario certo, ele ficará sempre repetindo
+                System.out.println("Informe o seu usuario: ");//pergunta o codigo de usuario
                 int user = input.nextInt();
-                System.out.println("Informe a sua senha: ");
+                System.out.println("Informe a sua senha: ");//pergunta o senha do usuario
                 String request = input.next();
-                opc=0;
-                id=0;
-                for (int i=0 ; i<4; i++){
-                    if(request.equals(senha[i]) && user==login[i]){
-                        id=i;
-                        invalid=false;
+                opc=0;//difine a variavel para zero por causa do caixa
+                id=0;//difine a variavel para zero para evitar possível problemas
+                for (int i=0 ; i<4; i++){//repete passando pelo todos índices dos vetores
+                    if(request.equals(senha[i]) && user==login[i]){//verífica se o codigo e senha estão corretos
+                        id=i;//difine a posição do vetor
+                        invalid=false;//difine a varíavel para falso para não continuar perguntando usuario e senha
                     }
                 }
-                if (invalid==true){
+                if (invalid==true){//Se a varíavel ainda continuar verdadeira signifa que senha e usuario possívelmente estão incorretos
                     System.out.println(" ## SENHA OU USUARIO ESTÃO INCORRETOS ##");
                 }
             }
