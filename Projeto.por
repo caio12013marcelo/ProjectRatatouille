@@ -2,13 +2,17 @@ programa
 {
 	
 	funcao inicio()
-	{
+	{	//saque	restoNotas! opcao deposito   numero usuario codigo
 		inteiro saque=0,restante=0,opc=0,deposito=0,valor100=0,valor50=0,valor20=0,valor10=0,valor5=0,valor2=0,numUsuario=0,cod
+		//saldo:sao os valores que cada usuario tem (Rodney=7005,edney=300...) login:é uma forma de identificar o usuario (101=Rodney,103=edney...)
 		inteiro saldo[5]={7005,200,300,400,500},login[5]={101,102,103,104,105}
+		//senha:é o um codigo de seguranca que cada usuario tem para acessar sua conta (Rodney=101) //usuario:é a pessoa que irá acessar sua propria conta
 		cadeia senha[5]= {"101","102","103","104","105"},usuario[5]={"Rodney","Claudney","Edney","vanderley","Sidney"},password
-		logico invalid=verdadeiro
-		enquanto(invalid){
-			enquanto(invalid){
+		
+		logico invalid=verdadeiro//serve para definir quando o enquanto estara ativo
+		
+		enquanto(invalid){//repete programa
+			enquanto(invalid){//
 				escreva(" ## Informe o codigo de usuario :")
 				leia(cod)
 				escreva(" ## Informe a senha :")
@@ -134,6 +138,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
+ * @POSICAO-CURSOR = 822; 
  * @POSICAO-CURSOR = 785; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
