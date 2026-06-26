@@ -14,12 +14,12 @@ public class Main {
                 int user = input.nextInt();//Lê a respota do usuario e cria variável para guarda a resposta
                 System.out.println("Informe a sua senha: ");//pergunta o senha do usuario
                 String request = input.next();//Lê a respota do usuario e cria variável para guarda a resposta
-                opc=0;//difine a variavel para zero por causa do caixa
-                id=0;//difine a variavel para zero para evitar possível problemas
+                opc=0;//define a variavel para zero por causa do caixa
+                id=0;//define a variavel para zero para evitar possível problemas
                 for (int i=0 ; i<4; i++){//repete passando pelo todos índices dos vetores
                     if(request.equals(senha[i]) && user==login[i]){//verífica se o codigo e senha estão corretos
-                        id=i;//difine a posição do vetor
-                        invalid=false;//difine a varíavel para falso para não continuar perguntando usuario e senha
+                        id=i;//define a posição do vetor
+                        invalid=false;//define a varíavel para falso para não continuar perguntando usuario e senha
                     }
                 }
                 if (invalid==true){//Se a varíavel ainda continuar verdadeira signifa que senha e usuario possívelmente estão incorretos
@@ -76,7 +76,7 @@ public class Main {
                                         valor20=30;
                                     }
                                     rest= rest-valor20*20;
-                                    System.out.println("*20 ratatouilles : "+valor20);
+                                    System.out.println("*20  ratatouilles : "+valor20);
                                 }
                                 if (rest>=10){
                                     if (rest>=10 && rest<300){
@@ -87,7 +87,7 @@ public class Main {
                                     rest= rest-valor10*10;
                                     System.out.println("*10 ratatouilles : "+valor10);
                                 }
-                                if (rest>=5){
+                                if (rest>=5 && rest % 5 ==0){
                                     if (rest % 5 ==0 && rest<75){
                                         valor5 = rest/5;
                                     }else{
@@ -96,7 +96,7 @@ public class Main {
                                     rest= rest-valor5*5;
                                     System.out.println("*5 ratatouilles : "+valor5);
                                 }
-                                if (rest>=2){
+                                if (rest>=2 && rest % 2 ==0){
                                     if (rest % 2 ==0 && rest<30){
                                         valor2= rest/2;
                                     }else{
