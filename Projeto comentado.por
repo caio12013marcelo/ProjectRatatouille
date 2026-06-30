@@ -2,9 +2,10 @@ programa
 {
 	
 	funcao inicio()
-	{	//saque	restoNotas! opcao deposito   numero usuario codigo
-		inteiro saque=0,restante=0,opc=0,deposito=0,numUsuario=0,  cod
-		// nota100    nota50    nota20    nota10    nota5    nota2
+	{
+		//	saque saquetbm   opcao  deposito  numero usuario codigo
+	inteiro saque=0,restante=0,opc=0,deposito=0,numUsuario=0,  cod
+		//nota100    nota50    nota20    nota10    nota5    nota2
 	inteiro valor100=0,valor50=0,valor20=0,valor10=0,valor5=0,valor2=0
 		//saldo:sao os valores que cada usuario tem (Rodney=7005,edney=300...)	
 	inteiro saldo[5]={7005,200,300,400,500}
@@ -31,12 +32,11 @@ programa
 			//precaucao
 			numUsuario=0
 			opc=0 
-			//igual a zero para ele poder voltar para o inicio.
-			//se nao estivesse assim,quando digitado o 4 (termina o codigo) nao daria continuidade
-			//pois o opc ficaria programado para entrar na opcao 4 sempre.
+			//(=0)para que ele possa voltar para o inicio.
+			//se nao,quando digitado o 4 (termina o codigo) nao daria continuidade,
+			//pois o opc (opcao) ficaria programado para entrar na opcao 4 sempre.		
+			limpa()//limpa	
 			
-			limpa()//limpa
-	
 			para(inteiro i=0;i<4;i++)//é igual o (enquanto) mas repete a quantidade de vezes que vc colocou
 			{
 				//o codigo informado igual a um dos numeros citados no vetor "login"
@@ -44,16 +44,17 @@ programa
 				se(cod==login[i] e senha[i]==password)
 				{
 					numUsuario = i//para encontrar a sua localizacao nos dois vetores (senha e login)
-					invalid=falso//se torna falso para que
+					invalid=falso
 				}
 			}
-		
+					
 				se(invalid==verdadeiro)//pulara o (para por que esta falso e entrara aqui (caso a senha e o login nao baterem)
 				{
 					escreva("## SENHA OU USUARIOS ERRADOS ##\n")//a senha ou o login nao bateram
 				}
-		}
-	enquanto(opc!=4)//peretira ate o cara digitar a opcao 4 (encerra)
+		 }
+		 
+	enquanto(opc!=4)//repetira ate o cara digitar a opcao 4 (encerra)
 	{
 		escreva(" ## SEJA-BEM VINDO, ",usuario[numUsuario]," ##\n")//inicio,ali aparece o nome do usuario
 		invalid=verdadeiro //invalid retorna a ficar verdadeiro para que o codigo se repita (o comeco do codigo é "verdadeiro")
@@ -61,8 +62,7 @@ programa
 		escreva("\nEscolha a opção desejada: ")
 		leia(opc)//opcao 1,2,3 ou 4
 		
-		limpa()//limpa
-			
+		limpa()//limpa		
 		escolha(opc)//opcoes
 		{
 			//se o usuario digitar (1),aparecerá o saldo e  o nome do usuario
@@ -99,7 +99,7 @@ programa
 						{
 						saldo[numUsuario]= saldo[numUsuario]-saque //retira o valor pedido na conta do usuario
 						}
-		restante=saque//tornar bunitinnho
+		restante=saque//serve para armazenar o valor do saque,o reste é so calculo
 		escreva("## Usuario : ",usuario[numUsuario]," ##\n NOTAS ENTREGUES\n")//notas que o banco entregou para ele
 		
 		se(restante>=100)//saque igual ou maior que 100
@@ -123,7 +123,7 @@ programa
 			}
 			senao
 			{
-				valor50=40
+				valor50=40//quantidade maxima de notas de 50
 			}
 			restante= restante-valor50*50
 			escreva("50 Ratatouilles: ",valor50,"\n")//mostra a quantidade de notas entregues
@@ -137,7 +137,7 @@ programa
 			}
 			senao
 			{
-				valor20=30
+				valor20=30//quantidade maxima de notas de 20
 			}
 			restante= restante-valor20*20
 			escreva("20 Ratatouilles: ",valor20,"\n")//mostra a quantidade de notas entregues
@@ -151,7 +151,7 @@ programa
 			}
 			senao
 			{
-				valor10=30
+				valor10=30//quantidade maxima de notas de 10
 			}
 			restante= restante-valor10*10
 			escreva("10 Ratatouilles: ",valor10,"\n")//mostra a quantidade de notas entregues
@@ -165,7 +165,7 @@ programa
 			}
 			senao
 			{
-				valor5=15
+				valor5=15//quantidade maxima de notas de 15
 			}
 			restante= restante-valor5*5
 			escreva("5 Ratatouilles: ",valor5,"\n")//mostra a quantidade de notas entregues
@@ -177,7 +177,7 @@ programa
 				valor2=restante/2//para ver quantas notas de 2 seram entregadas pelo banco
 			}senao
 			{
-				valor2=15
+				valor2=15//numero total
 			}
 			restante= restante-valor2*2
 			escreva("2 Ratatouilles: ",valor2,"\n")//mostra a quantidade de notas entregues
@@ -204,8 +204,7 @@ programa
 			caso contrario://qual quer numero antes ou depois desses(1,2,3, e 4) será invalidado
 				escreva("opção ínvalida\n")
 			pare
-			}
-		
+			}	
 		}
 
 	}	
@@ -217,7 +216,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 0; 
+ * @POSICAO-CURSOR = 44; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
