@@ -43,8 +43,8 @@ programa
 				caso 2:
 					escreva(" ## Informe o valor do saque : ")
 					leia(saque)
-					se(saque%10 == 1 ou saque%10 == 3){
-						escreva(" ## Invalido, não pode sacar terminando em 1 ou 3 ## \n")
+					se(saque%10 == 1){
+						escreva(" ## Invalido, não pode sacar terminando em 1## \n")
 					}senao{
 					se(saque>saldo[numUsuario]){
 						escreva(" ## Você não possue dinheiro para sacar esse valor ## \n")
@@ -102,7 +102,7 @@ programa
 							restante= restante-valor5*5
 							escreva(" * 5 Ratatouilles: ",valor5,"\n")
 							}
-						se(restante % 2 == 0 e restante>=2){
+						se(restante % 2 == 0 e restante>=2 ou restante==3){
 							se(restante>=2 e restante <=30){
 								valor2=restante/2
 							}senao{
@@ -111,9 +111,21 @@ programa
 						restante= restante-valor2*2
 						escreva(" * 2 Ratatouilles: ",valor2,"\n")
 						}
-						se(restante==7){
+						se(restante==7 ou restante==9){
+							se(restante==7){
+								restante= restante-7
+								valor5=1
+								valor2=1
+							}senao se(restante==9){
+								restante= restante-9
+								valor5=1
+								valor2=4
+							}
+							escreva(" * 5 Ratatouilles: ",valor5,"\n")
+							escreva(" * 2 Ratatouilles: ",valor2,"\n")
+						}
 					   }
-					   escreva(" ## saldo restante : ",saldo[numUsuario]," ## \n")
+					   escreva(" ## Valor do saque foi de ",saque," saldo restante : ",saldo[numUsuario]," ## \n")
 					}
 					pare
 				caso 3:
@@ -139,7 +151,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4253; 
+ * @POSICAO-CURSOR = 4590; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
