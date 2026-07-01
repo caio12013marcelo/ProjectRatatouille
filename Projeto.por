@@ -56,6 +56,7 @@ programa
 						}senao{
 							saldo[numUsuario]= saldo[numUsuario]-saque
 						}se(saque%10==3){
+							escreva(" ## ALERTA : Por saque terminar em valor 3 daremos uma nota de 2 ratatouilles e guardaremos o resto ## \n")
 							saque=saque-1
 						}
 						restante=saque
@@ -155,7 +156,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2257; 
+ * @POSICAO-CURSOR = 2329; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
