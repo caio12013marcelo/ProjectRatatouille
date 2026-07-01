@@ -55,9 +55,12 @@ programa
 							saque=7005
 						}senao{
 							saldo[numUsuario]= saldo[numUsuario]-saque
+						}se(saque%10==3){
+							saque=saque-1
 						}
 						restante=saque
-						escreva(" ## Usuario : ",usuario[numUsuario]," ##\n NOTAS ENTREGUES\n")
+						escreva(" ## Usuario : ",usuario[numUsuario]," ##\n=== NOTAS ENTREGUES ===\n")
+						
 						se(restante>=100){
 								se(restante>=100 e restante<=4000){
 									valor100= restante/100
@@ -152,7 +155,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2119; 
+ * @POSICAO-CURSOR = 2257; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
