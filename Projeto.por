@@ -124,7 +124,7 @@ programa
 							}senao se(restante==9){
 								restante= restante-9
 								valor5=1
-								valor2=4
+								valor2=2
 							}
 							escreva(" * 5 Ratatouilles: ",valor5,"\n")
 							escreva(" * 2 Ratatouilles: ",valor2,"\n")
