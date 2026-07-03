@@ -43,6 +43,9 @@ programa
 				caso 2:
 					escreva(" ## Informe o valor do saque : ")
 					leia(saque)
+					se(saque<=0){
+						escreva(" ## Não é possível realizar depósito neste valor ##\n")
+					}senao{
 					se(saque%10 == 1){
 						escreva(" ## Invalido, não pode sacar terminando em 1## \n")
 					}senao{
@@ -130,13 +133,18 @@ programa
 							escreva(" * 2 Ratatouilles: ",valor2,"\n")
 						}
 					   }
-					   escreva(" ## Valor do saque foi de ",saque," saldo restante : ",saldo[numUsuario]," ## \n")
+					  escreva(" ## Valor do saque foi de ",saque," saldo restante : ",saldo[numUsuario]," ## \n")
 					}
+				}
 					pare
 				caso 3:
 					escreva(" ## Informe o quanto quer depositar : \n")
 					leia(deposito)
-					saldo[numUsuario]= saldo[numUsuario]+deposito
+					se(deposito>=0){
+						saldo[numUsuario]= saldo[numUsuario]+deposito
+					}senao{
+						escreva(" ## Não é possível realizar depósito neste valor ##\n")
+					}
 					escreva("## Saldo disponível : ",saldo[numUsuario]," ## \n")
 					pare
 				caso 4:
@@ -156,7 +164,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2329; 
+ * @POSICAO-CURSOR = 4517; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
