@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int valor100=0,valor50=0,valor20=0,valor10=0,valor5=0,valor2=0,opc=0,id=0;
+        int valor100=0,valor50=0,valor20=0,valor10=0,valor5 =0,valor2=0,opc=0,id=0;
         int[] login={101,102,103,104,105},saldo={7005,295,633,326,457};
         String[] senha={"101","102","103","104","105"},userName={"Bruce","Clark","Peter","Eddie","Mary"};
         boolean invalid=true;//É uma varíavel que define se o While estará ativo
