@@ -43,11 +43,8 @@ programa
 				caso 2:
 					escreva(" ## Informe o valor do saque : ")
 					leia(saque)
-					se(saque<=0){
-						escreva(" ## Não é possível realizar depósito neste valor ##\n")
-					}senao{
-					se(saque%10 == 1){
-						escreva(" ## Invalido, não pode sacar terminando em 1## \n")
+					se(saque == 1){
+						escreva(" ## Invalido, não pode sacar 1 de ratatouille## \n")
 					}senao{
 					se(saque>saldo[numUsuario]){
 						escreva(" ## Você não possue dinheiro para sacar esse valor ## \n")
@@ -58,8 +55,8 @@ programa
 							saque=7005
 						}senao{
 							saldo[numUsuario]= saldo[numUsuario]-saque
-						}se(saque%10==3){
-							escreva(" ## ALERTA : Por saque terminar em valor 3 daremos uma nota de 2 ratatouilles e guardaremos o resto ## \n")
+						}se(saque%10==3 ou saque%10==1 ){
+							escreva(" ## ALERTA : Saques terminados em 3 ou 1 terão desconto de -1 ratatouille  ## \n")
 							saque=saque-1
 						}
 						restante=saque
@@ -133,18 +130,13 @@ programa
 							escreva(" * 2 Ratatouilles: ",valor2,"\n")
 						}
 					   }
-					  escreva(" ## Valor do saque foi de ",saque," saldo restante : ",saldo[numUsuario]," ## \n")
+					   escreva(" ## Valor do saque foi de ",saque," saldo restante : ",saldo[numUsuario]," ## \n")
 					}
-				}
 					pare
 				caso 3:
 					escreva(" ## Informe o quanto quer depositar : \n")
 					leia(deposito)
-					se(deposito>=0){
-						saldo[numUsuario]= saldo[numUsuario]+deposito
-					}senao{
-						escreva(" ## Não é possível realizar depósito neste valor ##\n")
-					}
+					saldo[numUsuario]= saldo[numUsuario]+deposito
 					escreva("## Saldo disponível : ",saldo[numUsuario]," ## \n")
 					pare
 				caso 4:
@@ -164,13 +156,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
-<<<<<<< Updated upstream
- * @POSICAO-CURSOR = 4517; 
-=======
- * @POSICAO-CURSOR = 1029; 
->>>>>>> Stashed changes
+ * @POSICAO-CURSOR = 2300; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
+ * @SIMBOLOS-INSPECIONADOS = {saque, 6, 10, 5}-{restante, 6, 18, 8}-{deposito, 6, 35, 8}-{valor100, 6, 46, 8}-{valor50, 6, 57, 7}-{valor20, 6, 67, 7}-{valor10, 6, 77, 7}-{valor5, 6, 87, 6}-{valor2, 6, 96, 6}-{saldo, 8, 10, 5};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
