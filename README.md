@@ -1,6 +1,26 @@
 # ProjectRatatouille.
 
-# Simulação de Caixa Eletrônico.
+	O ProjectRatatouille constitui em uma simulação de caixa eletrônico, em que utiliza ratatouilles como moeda.
 
-Projeto de simulação de caixa Eletrônico, que ultiliza o ratatouille como moeda
-<img width="498" height="472" alt="WhatsApp Image 2026-06-18 at 14 40 43" src="https://github.com/user-attachments/assets/78055c4e-6afe-4d7e-b575-1a1597d4c12b" />
+    ### Critérios ###
+
+# Ter senha e login;
+
+Cada Usuário tem que possuir já saldo existente na conta.
+
+# Ter quatro opções:
+
+Consultar Saldo;
+Saque;
+Depositar;
+Sair;
+
+tem limite de notas entregues que são :
+* 100 ratatouilles : 40;
+* 50  ratatouilles : 40;
+* 20  ratatouilles : 30;
+* 10  ratatouilles : 30;
+* 5   ratatouilles : 15;
+* 2   ratatouilles : 15;
+Esse limite é abastecido quando o código inicia e só é abastecido novamente se o usuário depositar mais moedas.
+
