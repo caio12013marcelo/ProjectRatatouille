@@ -71,9 +71,9 @@ programa
 								se(restante>=100 e restante<=notas100*100){
 									valor100= restante/100
 								}senao{
-									valor100= notas100/100
+									valor100= notas100
 								}
-							restante=restante-valor100
+							restante=restante-valor100*100
 							escreva(" * 100 Ratatouilles: ",valor100,"\n")
 								
 							}
@@ -81,7 +81,7 @@ programa
 								se(restante>=50 e restante<=notas50*50){
 									valor50=restante/50
 								}senao{
-									valor50= notas50/50
+									valor50= notas50
 								}
 							restante= restante-valor50*50
 							escreva(" * 50 Ratatouilles: ",valor50,"\n")
@@ -90,7 +90,7 @@ programa
 								se(restante>=20 e restante<=notas20*20){
 									valor20=restante/20
 								}senao{
-									valor20= notas20/20
+									valor20= notas20
 								}
 							restante= restante-valor20*20
 							escreva(" * 20 Ratatouilles: ",valor20,"\n")
@@ -99,7 +99,7 @@ programa
 								se(restante>=10 e restante<=notas10*10){
 									valor10=restante/10
 								}senao{
-									valor10= notas10/10
+									valor10= notas10
 								}
 							restante= restante-valor10*10
 							escreva(" * 10 Ratatouilles: ",valor10,"\n")
@@ -108,7 +108,7 @@ programa
 								se(restante>=5 e restante<=notas5*5){
 									valor5=restante/5
 								}senao{
-									valor5= notas5/5
+									valor5= notas5
 								}
 							restante= restante-valor5*5
 							escreva(" * 5 Ratatouilles: ",valor5,"\n")
@@ -117,7 +117,7 @@ programa
 							se(restante>=2 e restante<=notas2*2){
 								valor2=restante/2
 							}senao{
-								valor2= notas2/2
+								valor2= notas2
 							}
 						restante= restante-valor2*2
 						escreva(" * 2 Ratatouilles: ",valor2,"\n")
@@ -135,14 +135,15 @@ programa
 							escreva(" * 5 Ratatouilles: ",valor5,"\n")
 							escreva(" * 2 Ratatouilles: ",valor2,"\n")
 						}
-					   }
-					   notas100=notas100-valor100
-					   notas50=notas50-valor50
-					   notas20=notas20-valor20
-					   notas10=notas10-valor10
-					   notas5=notas5-valor5
-					   notas2=notas2-valor2
-					   escreva(" ## Valor do saque foi de ",saque," saldo restante : ",saldo[numUsuario]," ## \n")
+					   
+					  	 notas100=notas100-valor100
+					  	 notas50=notas50-valor50
+					  	 notas20=notas20-valor20
+					  	 notas10=notas10-valor10
+					  	 notas5=notas5-valor5
+					  	 notas2=notas2-valor2
+					  	 escreva(" ## Valor do saque foi de ",saque," saldo restante : ",saldo[numUsuario]," ## \n")
+						}
 					}
 					pare
 				caso 3:
@@ -223,9 +224,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1492; 
+ * @POSICAO-CURSOR = 4619; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {valor100, 6, 46, 8}-{notas100, 9, 10, 8};
+ * @SIMBOLOS-INSPECIONADOS = {saque, 6, 10, 5}-{valor100, 6, 46, 8}-{notas100, 9, 10, 8}-{notasTotal, 11, 10, 10};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
