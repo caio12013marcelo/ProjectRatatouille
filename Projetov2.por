@@ -47,6 +47,12 @@ programa
 					escreva(" ## Saldo de ( ",usuario[numUsuario]," ) , disponível de ",saldo[numUsuario]," ratatouille ##\n")
 					pare
 				caso 2:
+					notas100=notasTotal/100
+					notas50=notasTotal/50
+					notas20=notasTotal/20
+					notas10=notasTotal/10
+					notas5=notasTotal/5
+					notas2=notasTotal/2
 					escreva(" ## Informe o valor do saque : ")
 					leia(saque)
 					se(saque == 1){
@@ -151,6 +157,12 @@ programa
 					leia(deposito)
 					saldo[numUsuario]= saldo[numUsuario]+deposito
 					escreva("## Saldo disponível : ",saldo[numUsuario]," ## \n")
+					valor100=0
+					valor50=0
+					valor20=0
+					valor10=0
+					valor5=0
+					valor2=0
 					se(deposito>=100){
 							se(deposito>=100){
 								valor100= deposito/100
@@ -205,7 +217,7 @@ programa
 					   notas20=notas20+valor20
 					   notas10=notas10+valor10
 					   notas5=notas5+valor5
-					   notas2=notas2-valor2
+					   notas2=notas2+valor2
 					pare
 				caso 4:
 					limpa()
@@ -224,9 +236,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4619; 
+ * @POSICAO-CURSOR = 2069; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {saque, 6, 10, 5}-{valor100, 6, 46, 8}-{notas100, 9, 10, 8}-{notasTotal, 11, 10, 10};
+ * @SIMBOLOS-INSPECIONADOS = {saque, 6, 10, 5}-{valor100, 6, 46, 8}-{notas100, 9, 10, 8}-{notas50, 9, 22, 7}-{notas20, 9, 33, 7}-{notas10, 9, 44, 7}-{notas5, 9, 55, 6}-{notas2, 9, 65, 6}-{notasTotal, 11, 10, 10};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
