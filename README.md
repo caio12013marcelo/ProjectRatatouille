@@ -1,8 +1,8 @@
 # ProjectRatatouille.
 
-	O ProjectRatatouille constitui em uma simulação de caixa eletrônico, em que utiliza ratatouilles como moeda.
+  O ProjectRatatouille constitui em uma simulação de caixa eletrônico, em que utiliza ratatouilles como moeda.
 
-    ### Critérios ###
+  ### Critérios ###
 
 # Ter senha e login;
 
