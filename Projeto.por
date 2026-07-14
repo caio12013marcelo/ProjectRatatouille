@@ -2,17 +2,17 @@ programa
 {
 	
 	funcao inicio()
-	{	//saque	restoNotas! opcao deposito   numero usuario codigo
+	{	
 		inteiro saque=0,restante=0,opc=0,deposito=0,valor100=0,valor50=0,valor20=0,valor10=0,valor5=0,valor2=0,numUsuario=0,cod
-		//saldo:sao os valores que cada usuario tem (Rodney=7005,edney=300...) login:é uma forma de identificar o usuario (101=Rodney,103=edney...)
+		
 		inteiro saldo[5]={7005,200,300,400,500},login[5]={101,102,103,104,105}
-		//senha:é o um codigo de seguranca que cada usuario tem para acessar sua conta (Rodney=101) //usuario:é a pessoa que irá acessar sua propria conta
+		
 		cadeia senha[5]= {"101","102","103","104","105"},usuario[5]={"Rodney","Claudney","Edney","vanderley","Sidney"},password
 		
-		logico invalid=verdadeiro//serve para definir quando o enquanto estara ativo
+		logico invalid=verdadeiro
 		
-		enquanto(invalid){//repete programa
-			enquanto(invalid){//
+		enquanto(invalid){
+			enquanto(invalid){
 				escreva(" ## Informe o codigo de usuario :")
 				leia(cod)
 				escreva(" ## Informe a senha :")
@@ -53,11 +53,12 @@ programa
 							saldo[numUsuario]= saldo[numUsuario]-7005
 							escreva(" ## Limite de caixa é 7005 ## \n")
 							saque=7005
-						}senao{
-							saldo[numUsuario]= saldo[numUsuario]-saque
 						}se(saque%10==3 ou saque%10==1 ){
 							escreva(" ## ALERTA : Saques terminados em 3 ou 1 terão desconto de -1 ratatouille  ## \n")
 							saque=saque-1
+						}
+						senao{
+							saldo[numUsuario]= saldo[numUsuario]-saque
 						}
 						restante=saque
 						escreva(" ## Usuario : ",usuario[numUsuario]," ##\n=== NOTAS ENTREGUES ===\n")
@@ -151,12 +152,13 @@ programa
 	}	
    }
 }
+
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2300; 
+ * @POSICAO-CURSOR = 33; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {saque, 6, 10, 5}-{restante, 6, 18, 8}-{deposito, 6, 35, 8}-{valor100, 6, 46, 8}-{valor50, 6, 57, 7}-{valor20, 6, 67, 7}-{valor10, 6, 77, 7}-{valor5, 6, 87, 6}-{valor2, 6, 96, 6}-{saldo, 8, 10, 5};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
