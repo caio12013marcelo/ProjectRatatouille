@@ -72,11 +72,12 @@ programa
 							saldo[numUsuario]= saldo[numUsuario]-7005
 							escreva(" ## Limite de caixa é 7005 ## \n")//mensagem impressa na tela 
 							saque=7005//saque efetuado com valor total de caixa
-						}senao{
-							saldo[numUsuario]= saldo[numUsuario]-saque//saca normalmente 
-						}se(saque%10==3 ou saque%10==1){//se for divisivel por 3 ou 1 com resto zero
+						}
+						se(saque%10==3 ou saque%10==1){//se for divisivel por 3 ou 1 com resto zero
 							escreva(" ## ALERTA : Saques terminados em 3 ou 1 terão desconto de -1 ratatouille  ## \n")
 							saque=saque-1//retira -1 do saque que o usuario digitou,ja que nao temos moedas.
+						}senao{
+							saldo[numUsuario]= saldo[numUsuario]-saque//saca normalmente 
 						}
 						//sera usado para fazer os calculos de diminuiçao do "resto" para pegar todas as notas que serao entegues,nao estará afetando o saque 
 						restante=saque
@@ -178,13 +179,12 @@ programa
    }
 }
 
-
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 9349; 
+ * @POSICAO-CURSOR = 3863; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
